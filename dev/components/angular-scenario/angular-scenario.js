@@ -14363,7 +14363,7 @@ function Browser(window, document, $log, $sniffer) {
    */
   self.baseHref = function() {
     var href = baseElement.attr('href');
-    return href ? href.replace(/^(https?\:)?\/\/[^\/]*/, '') : '';
+    return href ? href.replace(/^(http?\:)?\/\/[^\/]*/, '') : '';
   };
 
   //////////////////////////////////////////////////////////////
@@ -22768,8 +22768,8 @@ function $RootScopeProvider(){
  * Private service to sanitize uris for links and images. Used by $compile and $sanitize.
  */
 function $$SanitizeUriProvider() {
-  var aHrefSanitizationWhitelist = /^\s*(https?|ftp|mailto|tel|file):/,
-    imgSrcSanitizationWhitelist = /^\s*(https?|ftp|file):|data:image\//;
+  var aHrefSanitizationWhitelist = /^\s*(http?|ftp|mailto|tel|file):/,
+    imgSrcSanitizationWhitelist = /^\s*(http?|ftp|file):|data:image\//;
 
   /**
    * @description
