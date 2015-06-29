@@ -22,7 +22,7 @@ module.provider('Restangular', function() {
               return _.contains(safeMethods, operation.toLowerCase());
             };
 
-            var absolutePattern = /^http?:\/\//i;
+            var absolutePattern = /^https?:\/\//i;
             config.isAbsoluteUrl = function(string) {
               return _.isUndefined(config.absoluteUrl) || _.isNull(config.absoluteUrl) ?
                       string && absolutePattern.test(string) :

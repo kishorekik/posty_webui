@@ -15,7 +15,7 @@ var win          = Y.config.win,
     selectedTab;
 
 // Kill pjax functionality unless serving over HTTP.
-if (!Y.getLocation().protocol.match(/^http?\:/)) {
+if (!Y.getLocation().protocol.match(/^https?\:/)) {
     Y.Router.html5 = false;
 }
 
